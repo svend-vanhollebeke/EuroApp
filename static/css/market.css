@@ -21,7 +21,7 @@ body {
 #div_market {
     height: 720px;
     width: 1080px;
-    margin: 50px auto;
+    margin: auto;
     background-image: url("/static/img/market.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ img {
 }
 
 #close {
-    bottom: 30px;
+    bottom: 10px;
     right: 860px;
 }
 
@@ -79,8 +79,8 @@ img {
     color: seagreen;
     background-color: lightgray;
     width: 360px;
-    top: 100px;
-    right: 220px;
+    top: 50px;
+    right: 200px;
 }
 
 #score_fruit {

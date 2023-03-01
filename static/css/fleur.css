@@ -21,21 +21,20 @@ body {
 #interface {
     height: 720px;
     width: 540px;
-    margin-top: 50px;
+    margin-top: 10px;
     border-right: solid 8px lightgray;
 }
 
 #div_stand_flower {
     height: 720px;
     width: 540px;
-    margin-top: 50px;
+    margin-top: 10px;
     background-image: url("/static/img/flower_stand.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #back {
-    bottom: 30px;
     left: 250px;
     position: relative;
     height: 96px;

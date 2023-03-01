@@ -21,14 +21,14 @@ body {
 #interface {
     height: 720px;
     width: 540px;
-    margin-top: 50px;
+    margin-top: 10px;
     border-right: solid 8px lightgray;
 }
 
 #div_stand_legumes {
     height: 720px;
     width: 540px;
-    margin-top: 50px;
+    margin-top: 10px;
     background-image: url("/static/img/legume_stand.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@ body {
     border-radius: 20px;
     border: whitesmoke 5px solid;
     background-color: lightgray;
-    bottom: 520px;
+    bottom: 500px;
     left: 450px;
 }
 
@@ -87,9 +87,9 @@ body {
 
 #achat {
     color: yellow;
-    font-size: 350%;
+    font-size: 250%;
     font-weight: bold;
-    font-family: "Monotype Corsiva", sans-serif;
+    font-family: "Verdana", sans-serif;
 }
 
 #table_comptoir {
