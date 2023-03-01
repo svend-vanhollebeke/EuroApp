@@ -21,7 +21,7 @@ body {
 #div_market {
     height: 720px;
     width: 1080px;
-    margin: auto;
+    margin: -15px auto;
     background-image: url("/static/img/market.png");
     background-size: cover;
     background-repeat: no-repeat;
