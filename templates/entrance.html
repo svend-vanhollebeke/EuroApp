@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trouve ton nom !</title>
+    <link rel="stylesheet" href="{% static 'css/entrance.css' %}">
+</head>
+<body>
+    <div id="div_entrance">
+        <h1>Sortie au marché</h1><br><br><br><br><br><br>
+        <form id="form_eleve" method="POST" action="{% url 'entrance' %}">
+            <select class="button" id="sel_prenom" name="prenom">
+                <option value="">Initiale prénom</option>
+                {% for letter in alphabet %}
+                <option value="{{ letter }}">{{ letter }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <select class="button" id="sel_nom" name="nom">
+                <option value="">Initiale nom</option>
+                {% for letter in alphabet %}
+                <option value="{{ letter }}">{{ letter }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <select class="button" id="sel_groupe" name="groupe" style="width: 18%;">
+                <option value="">Groupe</option>
+                {% for num in groupes %}
+                <option value="{{ num }}">{{ num }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input class="button" id="submit" type="submit" value="Aller au marché" style="color: yellow; font-weight: bolder">
+        </form>
+        {% if message %}
+            <br>
+            <input class="button" type="button" value="{{ message }}" style="color: orangered; font-weight: bolder">
+        {% endif %}
+        <img id="marchand" src="{% static 'img/marchant.png' %}" alt="marchant">
+        <img onclick="redirect_recap()" id="param" src="{% static 'img/icon_param.png' %}" alt="param"/>
+        <form id="form_mdp" method="POST" action="{% url 'recap' %}" style="visibility: hidden">
+            <input id="input_mdp" type="password" name="password" alt="pass"/>
+            <input id="submit_mdp" type="submit" value="OK"/>
+        </form>
+    </div>
+</body>
+<script src="{% static 'js/nav.js' %}"></script>
+</html>

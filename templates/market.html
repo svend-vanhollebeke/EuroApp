@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue au marché !</title>
+    <link rel="stylesheet" href="{% static 'css/market.css' %}">
+</head>
+<body>
+    <span id="nom_eleve">{{ eleve.prenom }} {{ eleve.nom }} du groupe {{ eleve.groupe }}</span>
+    <div id="div_market">
+        <img onclick="redirect_stand_fleurs()" id="bouquets" src="{% static 'img/bouquet.png' %}" alt="bouquet"/>
+        <span id="score_fleur">{{ eleve.nb_points_fleur }} points</span>
+        <img onclick="redirect_stand_legumes()" id="legumes" src="{% static 'img/legumes.png' %}" alt="legumes"/>
+        <span id="score_legume">{{ eleve.nb_points_legume }} points</span>
+        <img onclick="redirect_stand_fruits()" id="fruits" src="{% static 'img/fruits.png' %}" alt="fruits"/>
+        <span id="score_fruit">{{ eleve.nb_points_fruit }} points</span>
+        <img onclick="redirect_entrance()" id="close" src="{% static 'img/close.png' %}" alt="close"/>
+    </div>
+</body>
+<script src="{% static 'js/nav.js' %}"></script>
+</html>

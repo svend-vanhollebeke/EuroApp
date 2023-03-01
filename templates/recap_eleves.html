@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion élèves</title>
+    <link rel="stylesheet" href="{% static 'css/recap.css' %}">
+</head>
+<body>
+    <div id="div_recap">
+
+        <div id="prof">
+            <select id="select" id="sel_grp" name="groupe">
+                <option value="0">Grp</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <input id="input_edit" type="text" maxlength="16" placeholder="Changer mdp"/>
+            <img id="edit" onclick="edit_mdp()" src="{% static 'img/edit.png' %}" alt="edit"/>
+        </div>
+        <div id="liste_eleves">
+            {% for elv in eleves %}
+                <div class="eleve">
+                    <img onclick="delete_eleve({{ elv.id }})" class="delete_elv" src="{% static 'img/delete.png' %}" />
+                    <img onclick="connect_eleve({{ elv.id }})" class="connect_elv" src="{% static 'img/connect.png' %}" />
+                    <div style="background-color: deepskyblue; width: 30px; height: 100%; margin: auto 5px auto auto"></div>
+                    <table>
+                        <tr><td>Score fleur : {{ elv.nb_points_fleur }}</td></tr>
+                        <tr><td>Score fruit : {{ elv.nb_points_fruit }}</td></tr>
+                        <tr><td>Score légume : {{ elv.nb_points_legume }}</td></tr>
+                    </table>
+                    <h3 style="margin: auto auto auto 50px">{{ elv.prenom }} {{ elv.nom }}
+                        {% if grp %}
+                            <br>Groupe : {{ grp }}
+                        {% endif %}
+                    </h3>
+                </div>
+            {% endfor %}
+        </div><img onclick="quit()" id="close" src="{% static 'img/close.png' %}" alt="close"/>
+    </div>
+    >
+</body>
+<script src="{% static 'js/nav.js' %}"></script>
+</html>

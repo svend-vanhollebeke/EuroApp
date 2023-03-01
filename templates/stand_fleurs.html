@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stand de fleurs</title>
+    <link rel="stylesheet" href="{% static 'css/fleur.css' %}">
+</head>
+<body>
+    <div id="interface" style="background-color: cadetblue">
+        <table>
+            <tr>
+                <td><img class="piece" id="1e" src="{% static 'img/1euros.png' %}" alt="1€" draggable="true"></td>
+                <td><img class="billet" id="5e" src="{% static 'img/5euros.png' %}" alt="5€" draggable="true"></td>
+                <td><img class="billet" id="20e" src="{% static 'img/20euros.png' %}" alt="20€" draggable="true"></td>
+                <td><img class="billet" id="100e" src="{% static 'img/100euros.png' %}" alt="100€" draggable="true"></td>
+            </tr>
+            <tr>
+                <td><img class="piece" id="2e" src="{% static 'img/2euros.png' %}" alt="2€" draggable="true"></td>
+                <td><img class="billet" id="10e" src="{% static 'img/10euros.png' %}" alt="10€" draggable="true"></td>
+                <td><img class="billet" id="50e" src="{% static 'img/50euros.png' %}" alt="50€" draggable="true"></td>
+                <td></td>
+            </tr>
+        </table>
+        <div id="comptoir">
+            <table id="table_comptoir">
+                <tr>
+                    <td class="elem_comptoir" id="td1"></td>
+                    <td class="elem_comptoir" id="td2"></td>
+                    <td class="elem_comptoir" id="td3"></td>
+                </tr>
+                <tr>
+                    <td class="elem_comptoir" id="td4"></td>
+                    <td class="elem_comptoir" id="td5"></td>
+                    <td class="elem_comptoir" id="td6"></td>
+                </tr>
+                <tr>
+                    <td class="elem_comptoir" id="td7"></td>
+                    <td class="elem_comptoir" id="td8"></td>
+                    <td class="elem_comptoir" id="td9"></td>
+                </tr>
+                <tr>
+                    <td class="elem_comptoir" id="td10"></td>
+                    <td class="elem_comptoir" id="td11"></td>
+                    <td class="elem_comptoir" id="td12"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="div_comptoir">
+            <span id="achat">Achat n°1</span><input id="payer" type="button" value="Payer"/>
+        </div>
+    </div>
+    <div id="div_stand_flower">
+        <img onclick="redirect_market()" id="back" src="{% static 'img/back.png' %}" alt="back"/>
+        <h2 id="title">Stand de fleurs<br>Objectif : Etablir une somme</h2>
+        <div id="dialogue">
+            <p id="dial_texte">Fleuriste : Bonjour !</p>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/nav.js' %}"></script>
+<script src="{% static 'js/jeu_fleur.js' %}"></script>
+</html>

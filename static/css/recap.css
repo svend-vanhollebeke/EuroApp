@@ -1,0 +1,152 @@
+html {
+    background-color: darkslategray;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: lightgray;
+    overflow: hidden;
+    text-align: center;
+    /*display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;*/
+}
+
+#div_recap {
+    height: 720px;
+    width: 1080px;
+    margin: 50px auto;
+    background-image: url("/static/img/classe.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prof {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#liste_eleves {
+    position: relative;
+    margin: 30px auto auto 50px;
+    width: 70%;
+    height: 80%;
+    overflow-y: scroll;
+    direction: rtl;
+}
+
+.eleve {
+    margin: 8px 8px 8px 0;
+    width: 95%;
+    height: 80px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    border: deepskyblue solid 3px;
+    opacity: 0.9;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+table {
+    margin: 0 20px 0 70px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+td {
+    text-align: right;
+}
+
+#close {
+    bottom: 710px;
+    left: 510px;
+    position: relative;
+    height: 96px;
+    width: 96px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    background-color: lightgray;
+}
+
+.delete_elv, .connect_elv{
+    height: 48px;
+    width: 48px;
+    margin: 0 15px 0 15px;
+}
+
+#select {
+    background-color: whitesmoke;
+    opacity: 0.9;
+    border: deepskyblue solid 4px;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    width: 15%;
+    margin: 5px 25px auto 25px;
+    direction: rtl;
+}
+
+#edit {
+    width: 54px;
+    height: 54px;
+    background-color: whitesmoke;
+    border: deepskyblue solid 4px;
+    border-radius: 10px;
+}
+
+#input_edit {
+    background-color: whitesmoke;
+    opacity: 0.9;
+    border: deepskyblue solid 4px;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    width: 15%;
+}
+
+::-webkit-scrollbar {
+    margin-top: 50px;
+    width: 40px;
+    direction: ltr;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: deepskyblue;
+    border-radius: 8px;
+    border: lightskyblue solid 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: deepskyblue;
+    border: whitesmoke solid 3px;
+}

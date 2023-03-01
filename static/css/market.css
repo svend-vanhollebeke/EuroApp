@@ -1,0 +1,99 @@
+html {
+    background-color: darkslategray;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: lightgray;
+    overflow: hidden;
+    text-align: center;
+    /*display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;*/
+}
+
+#div_market {
+    height: 720px;
+    width: 1080px;
+    margin: 50px auto;
+    background-image: url("/static/img/market.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    position: relative;
+    height: 96px;
+    width: 96px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    background-color: lightgray;
+}
+
+#fruits {
+    top: 480px;
+    left: 250px;
+}
+
+#legumes {
+    top: 350px;
+    right: 350px;
+}
+
+#bouquets {
+    top: 300px;
+    left: 250px;
+}
+
+#close {
+    bottom: 30px;
+    right: 860px;
+}
+
+#score_fleur, #score_fruit, #score_legume {
+    position: relative;
+    font-family: "Verdana", sans-serif;
+    font-weight: bolder;
+    font-size: 150%;
+    padding: 8px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    color: seagreen;
+    background-color: lightgray;
+}
+
+#nom_eleve {
+    position: relative;
+    font-family: "Verdana", sans-serif;
+    font-weight: bolder;
+    font-size: 150%;
+    padding: 8px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    color: seagreen;
+    background-color: lightgray;
+    width: 360px;
+    top: 100px;
+    right: 220px;
+}
+
+#score_fruit {
+    top: 500px;
+    left: 200px;
+}
+
+#score_fleur {
+    top: 320px;
+    left: 200px;
+}
+
+#score_legume {
+    top: 370px;
+    right: 400px;
+}

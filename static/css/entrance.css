@@ -1,0 +1,124 @@
+html {
+    background-color: darkslategray;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: lightgray;
+    overflow: hidden;
+    text-align: center;
+    /*display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;*/
+}
+
+#div_entrance {
+    height: 720px;
+    width: 1080px;
+    margin: 50px auto;
+    background-image: url("/static/img/entrance.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    border: green solid 5px;
+    border-radius: 30px;
+    background-color: lightskyblue;
+    color: green;
+    font-size: 400%;
+    width: 500px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Monotype Corsiva", sans-serif;
+}
+
+.button {
+    background-color: darkslategray;
+    border: lightgray solid 2px;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 25%;
+}
+
+.button:hover {
+    background-color: lightseagreen;
+}
+
+#form_eleve {
+    margin: auto;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#marchand {
+    position: absolute;
+    height: 350px;
+    width: auto;
+    top: 475px;
+    right: 150px;
+}
+
+#param {
+    padding: 5px;
+    position: absolute;
+    height: 64px;
+    width: auto;
+    top: 650px;
+    left: 100px;
+    background-color: darkslategray;
+    border: lightgray solid 2px;
+    border-radius: 10px;
+}
+
+#form_mdp {
+    background-color: darkslategray;
+    border: lightgray solid 2px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 250px;
+    position: relative;
+    top: 75px;
+    left: 130px;
+    padding: 5px 0 5px 0;
+}
+
+#input_mdp {
+    background-color: lightseagreen;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: lightgray solid 2px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+#submit_mdp {
+    background-color: lightseagreen;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: lightgray solid 2px;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,49 @@
+html {
+    background-color: darkslategray;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: lightgray;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#interface {
+    height: 720px;
+    width: 540px;
+    margin-top: 50px;
+    border-right: solid 8px lightgray;
+}
+
+#div_stand_fruits {
+    height: 720px;
+    width: 540px;
+    margin-top: 50px;
+    background-image: url("/static/img/fruits_stand.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    position: relative;
+    height: 96px;
+    width: 96px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    background-color: lightgray;
+}
+
+#back {
+    bottom: 30px;
+    left: 250px;
+}
