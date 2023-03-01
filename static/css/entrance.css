@@ -21,7 +21,7 @@ body {
 #div_entrance {
     height: 720px;
     width: 1080px;
-    margin: 50px auto;
+    margin: -10px auto;
     background-image: url("/static/img/entrance.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@ h1 {
     position: absolute;
     height: 350px;
     width: auto;
-    top: 475px;
+    top: 400px;
     right: 150px;
 }
 
@@ -80,7 +80,7 @@ h1 {
     position: absolute;
     height: 64px;
     width: auto;
-    top: 650px;
+    top: 580px;
     left: 100px;
     background-color: darkslategray;
     border: lightgray solid 2px;
