@@ -53,7 +53,7 @@ body {
     border: white solid 3px;
     border-radius: 5px;
     color: yellow;
-    font-size: 150%;
+    font-size: 100%;
     font-family: "Verdana", sans-serif;
 }
 
@@ -70,7 +70,7 @@ body {
 #dialogue p {
     color: black;
     font-weight: bolder;
-    font-size: 125%;
+    font-size: 95%;
     font-family: "Verdana", sans-serif;
     margin: 5px 15px auto 15px;
 }
