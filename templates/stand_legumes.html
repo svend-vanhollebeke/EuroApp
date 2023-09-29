@@ -3,10 +3,21 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Stand de fleurs</title>
+    <title>Stand de légumes</title>
     <link rel="stylesheet" href="{% static 'css/legume.css' %}">
 </head>
 <body>
+    <div id="div_stand_legumes">
+        <div style="display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start;">
+            <img onclick="redirect_market()" id="back" src="{% static 'img/back.png' %}" alt="back"/>
+            <img id="infos" src="{% static 'img/info.png' %}" alt="infos"/>
+        </div>
+        <h2 id="title">Stand de légumes<br>Objectif : Retourner une différence</h2>
+        <img id="peanut" src="{% static 'img/peanut.png' %}" alt="peanut"/>
+        <div id="dialogue">
+            <p id="dial_texte">Peanut : Euh.. bonjour !</p>
+        </div>
+    </div>
     <div id="interface" style="background-color: cadetblue">
         <table>
             <tr>
@@ -47,16 +58,11 @@
             </table>
         </div>
         <div id="div_comptoir">
-            <span id="achat">Achat n°1</span><input id="payer" type="button" value="Payer"/>
+            <span id="retour">Retour n°1</span><input id="recuperer" type="button" value="Récupérer"/>
         </div>
     </div>
-    <div id="div_stand_legumes">
-        <img onclick="redirect_market()" id="back" src="{% static 'img/back.png' %}" alt="back"/>
-        <img id="peanut" src="{% static 'img/peanut.png' %}" alt="peanut"/>
-        <div id="dialogue">
-            Peanut :
-        </div>
-    </div>
+
 </body>
 <script src="{% static 'js/nav.js' %}"></script>
+<script src="{% static 'js/jeu_legume.js' %}"></script>
 </html>

@@ -51,8 +51,12 @@
         </div>
     </div>
     <div id="div_stand_flower">
-        <img onclick="redirect_market()" id="back" src="{% static 'img/back.png' %}" alt="back"/>
+        <div style="width: 21.5em; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-end; align-items: flex-end;">
+            <img onclick="redirect_market()" id="back" src="{% static 'img/back.png' %}" alt="back"/>
+            <img id="infos" src="{% static 'img/info.png' %}" alt="infos"/>
+        </div>
         <h2 id="title">Stand de fleurs<br>Objectif : Etablir une somme</h2>
+
         <div id="dialogue">
             <p id="dial_texte">Fleuriste : Bonjour !</p>
         </div>

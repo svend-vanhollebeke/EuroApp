@@ -1,23 +1,23 @@
 const billets = document.querySelectorAll('.billet');
 const pieces = document.querySelectorAll('.piece');
 const elem_comptoir = document.querySelectorAll('.elem_comptoir');
-const btn_payer = document.getElementById("payer");
-const liste_fleurs = {1:"roses", 2:"tulipes", 3:"lavandes", 4:"pivoines", 5:"lys", 6:"lilas", 7:"jonquilles", 8:"marguerites", 9:"jacinthes"};
+const btn_recup = document.getElementById("recuperer");
+const liste_legumes = {1:"carottes", 2:"tomates", 3:"courgettes", 4:"maïs", 5:"brocolis", 6:"radis", 7:"poivrons", 8:"salades", 9:"concombres"};
 let list_td = {"td1":false, "td2":false, "td3":false, "td4":false,
                "td5":false, "td6":false, "td7":false, "td8":false,
                "td9":false, "td10":false, "td11":false, "td12":false};
 
 let niveau = 1;
 let total = 0;
+let recu = 10;
 let prix = getRandomInt();
 
-let achat = document.getElementById("achat");
+let retour = document.getElementById("retour");
 let dialogue = document.getElementById("dial_texte");
-dialogue.innerHTML = "Bonjour ! <br>Pour un bouquet de <span style='font-size: 150%; color: darkcyan'>" + liste_fleurs[niveau] + "</span>,<br> cela nous fera exactement <span style='font-size: 180%; color: darkcyan;'>" + prix + " euros</span> !";
+dialogue.innerHTML = "Tu veux bien m'aider ?<br> On m'a acheté pour <span style='font-size: 180%; color: darkcyan;'>" + prix + "</span> euros de <span style='font-size: 150%; color: darkcyan'>" + liste_legumes[niveau] + "</span><br> avec un billet de <span style='font-size: 180%; color: darkcyan;'>" + recu + "</span> euros, combien dois-je rendre au client ? ";
 
 
-
-btn_payer.addEventListener('click', payer);
+btn_recup.addEventListener('click', retourner);
 
 billets.forEach(billet => {
     billet.addEventListener('click', click);
@@ -105,13 +105,15 @@ function getRandomInt() {
     if (niveau <= 3){
         hidePieces(false);
         hideBillets(true);
-        res = Math.floor(Math.random() * 16);
+        recu = 10;
+        res = Math.floor(Math.random() * 9);
         if (res === 0){
-            res = 10;
+            res = 9;
         }
     } else if (niveau <= 6){
         hidePieces(true);
         hideBillets(false);
+        recu = 100;
         res = Math.floor(Math.random() * 20);
         res = res * 5;
         if (res === 0){
@@ -120,6 +122,7 @@ function getRandomInt() {
     } else if (niveau <= 9){
         hidePieces(false);
         hideBillets(false);
+        recu = 100;
         res = Math.floor(Math.random() * 100);
         if (res <= 10){
             res = getRandomInt();
@@ -128,22 +131,24 @@ function getRandomInt() {
   return res;
 }
 
-function payer(){
+function retourner(){
     if (niveau <= 9){
-        if (total === prix){
+        if (total === (recu - prix)){
             setTimeout(niveauSuivant, 3000);
             marquePoint();
-            dialogue.innerHTML = "<span style='font-size: 180%; color: green'>Merci beaucoup !</span>";
+            dialogue.innerHTML = "<span style='font-size: 180%; color: green'>M-merci pour ton aide !</span>";
         } else {
             setTimeout(afficherDialogue, 5000);
-            dialogue.innerHTML = "<span style='font-size: 120%; font-weight: bolder; color: darkred'>" + total + " euros ? <br>Ce n'est pas la somme que je t'ai demandé, réessaie !</span>";
+            dialogue.innerHTML = "<span style='font-size: 120%; font-weight: bolder; color: darkred'>" + "Je te rends : " + total + " euros ?<br> Tu es sûr que c'est le bon rendu..? </span>";
 
         }
     }
 }
 
 function afficherDialogue(){
-        dialogue.innerHTML = "Pour un bouquet de <span style='font-size: 150%; color: darkcyan'>" + liste_fleurs[niveau] + "</span>,<br> cela nous fera exactement <span style='font-size: 180%; color: darkcyan;'>" + prix + " euros</span> !";
+    dialogue.innerHTML = "Tu veux bien m'aider ?" +
+                         "<br> On m'a acheté pour <span style='font-size: 180%; color: darkcyan;'>" + prix + "</span> euros de <span style='font-size: 150%; color: darkcyan'>" + liste_legumes[niveau] + "</span>" +
+                         "<br> avec un billet de <span style='font-size: 180%; color: darkcyan;'>" + recu + "</span> euros, combien dois-je rendre au client ? ";
 }
 
 function hidePieces(bool){
@@ -173,19 +178,20 @@ function niveauSuivant(){
     });
     niveau++;
     prix = getRandomInt();
-    achat.innerText = "Achat n°" + niveau;
+    retour.innerText = "Retour n°" + niveau;
     afficherDialogue();
     total = 0;
+    console.log(niveau);
     if (niveau >= 10){
         hidePieces(true);
         hideBillets(true);
-        dialogue.innerHTML = "<span style='font-size: 160%; color: green'>Merci pour ta visite, passe une bonne journée !</span>";
+        dialogue.innerHTML = "<span style='font-size: 160%; color: green'>Merci pour ton aide, à bientôt !</span>";
     }
 }
 
 function marquePoint(){
     const xhttp = new XMLHttpRequest();
-    let jeu = JSON.stringify({jeu:"fleur"});
+    let jeu = JSON.stringify({jeu:"legume"});
     xhttp.open("POST", "/marque_point", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(jeu);

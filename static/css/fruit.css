@@ -47,3 +47,41 @@ img {
     bottom: 30px;
     left: 250px;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.addition {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#result-input {
+    position: fixed;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 5px;
+    font-size: larger;
+}
+
+#score-lives {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}

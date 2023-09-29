@@ -42,11 +42,22 @@ body {
     border-radius: 20px;
     border: whitesmoke 5px solid;
     background-color: lightgray;
+    margin-bottom: 1em;
+}
+
+#infos {
+    left: 250px;
+    position: relative;
+    height: 96px;
+    width: 96px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    background-color: lightgray;
 }
 
 #title {
     position: relative;
-    margin: -100px auto;
+    margin: -15em auto auto 3em;
     width: 360px;
     height: 60px;
     background-color: seagreen;
@@ -63,7 +74,7 @@ body {
     background-color: ghostwhite;
     border: black solid 3px;
     border-radius: 15px;
-    margin: 620px auto;
+    margin: 35em auto;
     text-align: left;
 }
 

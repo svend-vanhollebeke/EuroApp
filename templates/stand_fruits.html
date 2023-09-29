@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <title>Stand des fruits</title>
     <link rel="stylesheet" href="{% static 'css/fruit.css' %}">
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
 </head>
 <body>
     <div id="interface" style="background-color: cadetblue">
-
+        <div id="game-container"></div>
+        <input id="result-input" type="number" placeholder="Résultat">
+        <div id="score-lives">Score: <span id="score">0</span> Lives: <span id="lives">3</span></div>
     </div>
     <div id="div_stand_fruits">
         <img onclick="redirect_market()" id="back" src="{% static 'img/back.png' %}" alt="back"/>
-
-
     </div>
 </body>
-<script src="{% static 'js/nav.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/nav.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/jeu_fruit.js' %}"></script>
+
 </html>

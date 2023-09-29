@@ -22,6 +22,7 @@ ADJECTIFS = {'Agréable': 1, 'Brillant.e': 2, 'Charmant.e': 3, 'Dynamique': 4, '
 
 GROUPES = {'1': 1, '2': 2, '3': 3}
 
+
 # Create your views here.
 def entrance(request):
     if request.method == "POST":
@@ -139,8 +140,8 @@ def marque_point(request):
             if jeu == "fleur":
                 eleve.nb_points_fleur += 1
             elif jeu == "fruit":
-                pass
+                eleve.nb_points_fruit += 1
             elif jeu == "legume":
-                pass
+                eleve.nb_points_legume += 1
             eleve.save()
     return HttpResponse()
