@@ -12,16 +12,20 @@ function quit(){
   window.location.href = "/entrance";
 }
 
-function redirect_stand_fruits(){
-  window.location.href = "/stand_fruits";
+function redirect_stand_fruits(id_elv){
+  window.location.href = "/stand_fruits/" + id_elv;
 }
 
-function redirect_stand_fleurs(){
-  window.location.href = "/stand_fleurs";
+function redirect_stand_fleurs(id_elv){
+  window.location.href = "/stand_fleurs/" + id_elv;
 }
 
-function redirect_stand_legumes(){
-  window.location.href = "/stand_legumes";
+function redirect_stand_legumes(id_elv){
+  window.location.href = "/stand_legumes/" + id_elv;
+}
+
+function redirect_stand_final(){
+  window.location.href = "/stand_final";
 }
 
 let form_mdp = document.getElementById("form_mdp");

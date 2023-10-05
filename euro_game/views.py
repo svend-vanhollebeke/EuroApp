@@ -69,16 +69,29 @@ def recap(request, grp=0):
         return render(request, 'recap_eleves.html', context)
 
 
-def stand_fruits(request):
+def stand_fruits(request, id_elv):
+    eleve = Eleve.objects.get(id=id_elv)
+    eleve.nb_points_fruit = 0
+    eleve.save()
     return render(request, 'stand_fruits.html')
 
 
-def stand_fleurs(request):
+def stand_fleurs(request, id_elv):
+    eleve = Eleve.objects.get(id=id_elv)
+    eleve.nb_points_fleur = 0
+    eleve.save()
     return render(request, 'stand_fleurs.html')
 
 
-def stand_legumes(request):
+def stand_legumes(request, id_elv):
+    eleve = Eleve.objects.get(id=id_elv)
+    eleve.nb_points_legume = 0
+    eleve.save()
     return render(request, 'stand_legumes.html')
+
+
+def stand_final(request):
+    return render(request, 'final.html')
 
 
 def create_eleve(request, init_prenom, init_nom, init_groupe):

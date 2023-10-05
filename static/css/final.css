@@ -1,0 +1,79 @@
+html {
+    background-color: darkslategray;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: lightgray;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#interface {
+    height: 720px;
+    width: 540px;
+    margin-top: 50px;
+}
+
+img {
+    position: relative;
+    height: 96px;
+    width: 96px;
+    border-radius: 20px;
+    border: whitesmoke 5px solid;
+    background-color: lightgray;
+}
+
+#back {
+    bottom: 30px;
+    left: 250px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/static/img/money.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.addition {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: forestgreen;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#result-input {
+    position: fixed;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 5px;
+    font-size: larger;
+}
+
+#score-lives {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}

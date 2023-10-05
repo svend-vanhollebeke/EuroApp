@@ -37,23 +37,43 @@ img {
 }
 
 #fruits {
-    top: 480px;
-    left: 250px;
+    top: 34em;
+    left: 19em;
+}
+
+#score_fruit {
+    top: 23.5em;
+    left: 10em;
 }
 
 #legumes {
-    top: 350px;
-    right: 350px;
+    top: 30em;
+    right: 17em;
+}
+
+#score_legume {
+    top: 21em;
+    right: 14em;
 }
 
 #bouquets {
-    top: 300px;
-    left: 250px;
+    top: 16em;
+    left: 23em;
+}
+
+#score_fleur {
+    top: 11.5em;
+    left: 13em;
+}
+
+#final {
+    top: 40em;
+    right: 25em;
 }
 
 #close {
-    bottom: 10px;
-    right: 870px;
+    bottom: 0.5em;
+    right: 66.5em;
 }
 
 #score_fleur, #score_fruit, #score_legume {
@@ -83,17 +103,3 @@ img {
     right: 200px;
 }
 
-#score_fruit {
-    top: 500px;
-    left: 200px;
-}
-
-#score_fleur {
-    top: 320px;
-    left: 200px;
-}
-
-#score_legume {
-    top: 370px;
-    right: 400px;
-}

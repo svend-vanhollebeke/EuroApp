@@ -9,12 +9,17 @@
 <body>
     <span id="nom_eleve">{{ eleve.prenom }} {{ eleve.nom }} du groupe {{ eleve.groupe }}</span>
     <div id="div_market">
-        <img onclick="redirect_stand_fleurs()" id="bouquets" src="{% static 'img/bouquet.png' %}" alt="bouquet"/>
+        <img onclick="redirect_stand_fleurs({{ eleve.id }})" id="bouquets" src="{% static 'img/bouquet.png' %}" alt="bouquet"/>
         <span id="score_fleur">{{ eleve.nb_points_fleur }} points</span>
-        <img onclick="redirect_stand_legumes()" id="legumes" src="{% static 'img/legumes.png' %}" alt="legumes"/>
+        <img onclick="redirect_stand_legumes({{ eleve.id }})" id="legumes" src="{% static 'img/legumes.png' %}" alt="legumes"/>
         <span id="score_legume">{{ eleve.nb_points_legume }} points</span>
-        <img onclick="redirect_stand_fruits()" id="fruits" src="{% static 'img/fruits.png' %}" alt="fruits"/>
+        <img onclick="redirect_stand_fruits({{ eleve.id }})" id="fruits" src="{% static 'img/fruits.png' %}" alt="fruits"/>
         <span id="score_fruit">{{ eleve.nb_points_fruit }} points</span>
+        {% if eleve.nb_points_fleur == 9 and eleve.nb_points_legume == 9 and eleve.nb_points_fruit == 9 %}
+            <img onclick="redirect_stand_final()" id="final" src="{% static 'img/lock.png' %}" alt="final" style="padding: 10px; height: 78px; width: 78px; visibility: visible"/>
+        {% else %}
+            <img onclick="redirect_stand_final()" id="final" src="{% static 'img/lock.png' %}" alt="final" style="padding: 10px; height: 78px; width: 78px; visibility: hidden"/>
+        {% endif %}
         <img onclick="redirect_entrance()" id="close" src="{% static 'img/close.png' %}" alt="close"/>
     </div>
 </body>
